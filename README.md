@@ -30,22 +30,26 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tess
 ```
 
 ## Project Structure
-speech_recognition.py: This script listens to Kannada speech through a microphone and transcribes it using the Google Speech Recognition API.
+### speech_recognition.py:
+This script listens to Kannada speech through a microphone and transcribes it using the Google Speech Recognition API.
 
-image_text_recognition.py: This script reads an image, converts it to grayscale, and extracts Kannada text using Tesseract OCR. The detected language is also identified using the langdetect library.
+### image_text_recognition.py: ### 
+This script reads an image, converts it to grayscale, and extracts Kannada text using Tesseract OCR. The detected language is also identified using the langdetect library.
 
-real_time_text_recognition.py: This script captures video from the webcam, extracts text from each frame in real time, and detects the language of the text.
+### real_time_text_recognition.py: ### 
+This script captures video from the webcam, extracts text from each frame in real time, and detects the language of the text.
 
-## Usage
-Kannada Speech Recognition (speech_recognition.py)
-1.Run the script:
+## Usage ##
+### Kannada Speech Recognition (speech_recognition.py) ###
+
+1. Run the script:
 ```
 python speech_recognition.py
 ```
 
-2.Speak in Kannada. The script will listen to your speech and display the transcription on the console.
+2. Speak in Kannada. The script will listen to your speech and display the transcription on the console.
 
-3.Press q to stop the recognition.
+3. Press q to stop the recognition.
 
 ## Kannada Image Text Recognition (image_text_recognition.py)
 Place your image file in the same directory as the script or provide the full path to the image.
