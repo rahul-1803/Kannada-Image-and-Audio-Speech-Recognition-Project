@@ -1,77 +1,75 @@
-# Kannada-Image-and-Audio-Speech-Recognition-Project
-This project demonstrates the recognition of Kannada speech and text using Python. The repository contains three Python scripts, each focusing on different aspects of speech and text recognition using various libraries such as speech_recognition, pytesseract, opencv-python, and langdetect.
+Here’s an updated version reflecting the use of Gradio for a multi-functional text recognition system:
+
+---
+
+# Kannada Multi-Function Text Recognition System
+
+This project demonstrates a multi-functional system for recognizing Kannada speech and text using Python, now with an interactive Gradio interface. The system handles Kannada speech, image-based text, and real-time video text recognition across multiple languages. Key libraries include `speech_recognition`, `pytesseract`, `opencv-python`, and `langdetect`.
 
 ## Table of Contents
 
 ### Prerequisites
 Before you begin, ensure you have the following software installed on your system:
 
-Python 3.7 or higher
-Tesseract OCR (for text recognition)
+- Python 3.7 or higher
+- Tesseract OCR (for text recognition)
 
 ## Installation
-1.Clone the repository: 
-```
-git clone https://github.com/yourusername/kannada-speech-text-recognition.git
- ```
-```
-cd kannada-speech-text-recognition
-```
+1. Clone the repository: 
+   ```bash
+   git clone https://github.com/yourusername/kannada-text-recognition.git
+   cd kannada-text-recognition
+   ```
 
-2.Install the required Python packages:
-```
-pip install -r requirements.txt
-```
-3.Make sure Tesseract OCR is installed on your system.
+2. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4.Update the path to the Tesseract executable in the Python scripts as needed:
-```
-pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
-```
+3. Make sure Tesseract OCR is installed on your system.
+
+4. Update the path to the Tesseract executable in the Python scripts as needed:
+   ```python
+   pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+   ```
 
 ## Project Structure
-### speech_recognition.py:
-This script listens to Kannada speech through a microphone and transcribes it using the Google Speech Recognition API.
+- **app.py**: This main Gradio app combines all functionalities in a single, user-friendly interface, enabling Kannada speech recognition, image-based text recognition, and real-time camera text recognition.
+  
+- **speech_recognition.py**: Script to recognize Kannada speech through a microphone using the Google Speech Recognition API.
 
-### image_text_recognition.py: ### 
-This script reads an image, converts it to grayscale, and extracts Kannada text using Tesseract OCR. The detected language is also identified using the langdetect library.
+- **image_text_recognition.py**: Script to read images, convert them to grayscale, and extract Kannada text using Tesseract OCR, identifying the language with `langdetect`.
 
-### real_time_text_recognition.py: ### 
-This script captures video from the webcam, extracts text from each frame in real time, and detects the language of the text.
+- **real_time_text_recognition.py**: Captures video from the webcam, performs real-time text extraction, and detects language for each frame.
 
-## Usage ##
-### Kannada Speech Recognition (speech_recognition.py) ###
+## Usage
+### Multi-Function Interface (app.py)
+1. Run the Gradio app:
+   ```bash
+   python app.py
+   ```
+2. Open the displayed URL in your browser. You can then choose between Kannada speech recognition, image text recognition, or real-time camera text recognition.
 
+### Kannada Speech Recognition (speech_recognition.py)
 1. Run the script:
-```
-python speech_recognition.py
-```
+   ```bash
+   python speech_recognition.py
+   ```
+2. Speak in Kannada, and the transcription will appear on the console.
 
-2. Speak in Kannada. The script will listen to your speech and display the transcription on the console.
+### Kannada Image Text Recognition (image_text_recognition.py)
+1. Place an image in the same directory as the script or specify its full path.
+2. Run the script:
+   ```bash
+   python image_text_recognition.py
+   ```
+3. Extracted text and detected language are displayed on the console.
 
-3. Press q to stop the recognition.
+### Real-Time Text Recognition (real_time_text_recognition.py)
+1. Ensure your webcam is connected and working.
+2. Run the script:
+   ```bash
+   python real_time_text_recognition.py
+   ```
+3. The script displays the video feed with real-time text extraction and language detection. Press `q` to stop the camera.
 
-## Kannada Image Text Recognition (image_text_recognition.py)
-Place your image file in the same directory as the script or provide the full path to the image.
-
-1.Run the script:
-```
-python image_text_recognition.py
-```
-
-2.The script will display the extracted text and the detected language.
-
-# Real-Time Text Recognition (real_time_text_recognition.py)
-1.Ensure your webcam is connected and working.
-
-2.Run the script:
-```
-python real_time_text_recognition.py
-```
-3.The script will display the webcam feed, extract text in real time, and display the detected language. Press q to stop the camera.
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for any bugs, features, or improvements.
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
